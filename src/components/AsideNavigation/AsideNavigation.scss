@@ -1,0 +1,30 @@
+.aside-navigation  {
+    height: 100vh;
+    width: 72px;
+    max-width: 72px;
+
+    padding-top: 8px;
+    padding-bottom: 8px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    // make backgoround color variable
+    background: var(--asideNavigation-backgroundColor);
+    backdrop-filter: blur(25px);
+
+    border-right: 1px rgba(0,0,0, 0.1) solid;
+
+    li {
+        list-style: none;
+    }
+
+}
+
+
+  
+
+  
+

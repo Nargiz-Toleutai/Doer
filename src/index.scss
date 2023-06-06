@@ -1,0 +1,14 @@
+@use "../src/styles/typography.scss";
+@import "./styles/palettes.scss";
+@import "./styles/fonts.scss";
+
+body {
+  margin: 0;
+  @include typography.body;
+}
+
+code {
+  @include typography.body;
+}
+
+

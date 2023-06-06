@@ -1,0 +1,3 @@
+export const DEFAUL_DURATION_IN_SECS = 30; // rename to ''
+export const DEFAUL_DURATION_IN_MS = DEFAUL_DURATION_IN_SECS * 1000;
+export const UPDATE_INTERVAL_IN_MS = 100;

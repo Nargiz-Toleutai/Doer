@@ -1,5 +1,7 @@
 .aside-navigation  {
-    height: 100vh;
+    box-sizing: border-box;
+
+    height: 100%;
     width: 72px;
     max-width: 72px;
 
@@ -11,11 +13,24 @@
     justify-content: space-between;
     align-items: center;
 
-    // make backgoround color variable
-    background: var(--asideNavigation-backgroundColor);
+    background: var(--aside-navigation-background-color);
     backdrop-filter: blur(25px);
 
     border-right: 1px rgba(0,0,0, 0.1) solid;
+
+    &__main {
+        ul {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 40px;
+        }
+    }
+
+    ul {
+        margin: 0;
+        padding: 0;
+    }
 
     li {
         list-style: none;

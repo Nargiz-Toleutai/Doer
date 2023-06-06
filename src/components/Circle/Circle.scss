@@ -1,0 +1,34 @@
+@use '../../styles/typography.scss';
+
+.timer {
+    position: relative;
+    width: 360px;
+    height: 360px;
+
+
+&__circle {
+    fill: none;
+    stroke: var(--primary-red);
+    stroke-dasharray: 440;
+    transition: stroke-dashoffset 250ms linear;
+    transform-origin: center center;
+    transform: rotate(-90deg);
+}
+
+&__text {
+    @include typography.header3;
+    text-anchor: middle;
+    fill: var(--dark-theme-primary);
+    dominant-baseline: middle;
+}
+
+@keyframes countdown {
+    0% {
+        stroke-dashoffset: 440;
+    }
+
+    100% {
+        stroke-dashoffset: 0;
+    }
+}
+}

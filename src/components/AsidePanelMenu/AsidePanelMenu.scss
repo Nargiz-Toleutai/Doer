@@ -1,0 +1,76 @@
+@use "../../styles/typography.scss";
+
+.aside-panel-menu {
+    position: relative;
+    box-sizing: border-box;
+
+    height: 100%;
+    width: 320px;
+    max-width: 320px;
+    $padding: 16px;
+
+    padding: $padding;
+
+    overflow-y: scroll;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    background-color: var(--aside-panel-menu-background-color);
+   
+    border-radius: 0px;
+    color: var(--dark-theme-primary);
+
+    &__main {
+        ul {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 40px;
+        }
+    }
+
+    ul {
+        margin: 0;
+        padding: 0;
+    }
+
+
+    li {
+        list-style: none;
+    }
+
+    h6 {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        @include typography.header6;
+        gap: 8px;
+        margin: 10px 0 10px 8px;
+        height: 20px;
+        color: var(--dark-theme-placeHolder);
+
+        &:first-of-type{
+            color: var(--dark-theme-primary)
+        }
+    }
+
+    h3 {
+        @include typography.header3;
+        margin: 0 0 21px 8px;
+        height: 42px;
+    }
+
+    hr {
+        border: none;
+        color: var(--dark-theme-disabled);
+        border-top: 2px dotted;
+        height: 0;
+        width: 100%;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+}

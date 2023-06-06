@@ -1,0 +1,105 @@
+@use '../../styles/typography.scss';
+
+.pomodoro {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    background-color: var(--main-panel-background-color);
+    color: var(--dark-theme-primary);
+
+    &__header {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+
+        width: 171px;
+        height: 42px;
+
+        padding: 8px 0 8px 40px;
+        margin-top: 48px;
+        margin-bottom: 24px
+    }
+
+    &__main {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        flex-grow: 1;
+
+        h6 {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            @include typography.header6;
+
+            width: 488px;
+            height: 20px;
+            margin: 16px 0 2px 0;
+        }
+
+        p {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            @include typography.note;
+            color: var(--dark-theme-secondary);
+
+            width: 488px;
+            height: 16px;
+            margin: 0 0 29px 0;
+        }
+
+        button {
+            @include typography.header6;
+            color: var(--dark-theme-primary);
+
+            background-color: var(--primary-red);
+            border-color: transparent;
+            border-radius: 32px;
+
+            width: 146px;
+            height: 48px;
+        }
+    }
+
+
+    // &__timer {
+    //     position: relative;
+    //     width: 360px;
+    //     height: 360px;
+    // }
+
+    // &__circle {
+    //     fill: none;
+    //     stroke: var(--primary-red);
+    //     stroke-dasharray: 440;
+    //     transition: stroke-dashoffset 250ms linear;
+    //     transform-origin: center center;
+    //     transform: rotate(-90deg);
+    // }
+
+    // &__text {
+    //     // fill: #1abc9c;
+    //     @include typography.header3;
+    //     text-anchor: middle;
+    //     fill: var(--dark-theme-primary);
+    //     dominant-baseline: middle;
+    // }
+
+    // @keyframes countdown {
+    //     0% {
+    //         stroke-dashoffset: 440;
+    //     }
+
+    //     100% {
+    //         stroke-dashoffset: 0;
+    //     }
+    // }
+};

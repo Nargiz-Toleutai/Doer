@@ -25,19 +25,23 @@ export const AsideNavigation: React.FC = () => {
   return (
     <aside className={b()}>
       <Logo />
-      <nav>
-        {links.map((link) => (
-          <li key={link.id}>
-            <AsideNavigationLink {...link} selected={link.to === location.pathname}/>
-          </li>
-        ))}
+      <nav className={b('main')}>
+        <ul>
+          {links.map((link) => (
+            <li key={link.id}>
+              <AsideNavigationLink {...link} selected={link.to === location.pathname} />
+            </li>
+          ))}
+        </ul>
       </nav>
-      <nav>
-        {additionalLinks.map((link) => (
-          <li key={link.id}>
-            <AsideNavigationLink {...link} selected={link.to === location.pathname}/>
-          </li>
-        ))}
+      <nav className={b('additional')}>
+        <ul>
+          {additionalLinks.map((link) => (
+            <li key={link.id}>
+              <AsideNavigationLink {...link} selected={link.to === location.pathname} />
+            </li>
+          ))}
+        </ul>
       </nav>
     </aside>
   );

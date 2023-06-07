@@ -1,0 +1,27 @@
+{
+    "Home": "Домашняя страница",
+    "Statistics": "Статистика",
+    "Pomodoro": "Помодоро",
+    "Profile": "Профиль",
+
+    "Today":  "Сегодня",
+    "Tomorrow":  "Завтра",
+    "Next 7 Days": "Следующие 7 дней",
+    "This Month":  "В этом месяце",
+    "Completed": "Выполнены",
+
+    "High":  "Высокий",
+    "Medium": "Средний",
+    "Low": "Низкий",
+    
+    "Nargiza&rsquo;s": "Наргиз",
+    "Habits":  "Привычки",
+    "Priority": "Приоритет",
+
+    "Control your habits!": "Контролируй свои привычки!",
+    "Choose any habit from the list and start the timer": "Выбери любую привычку из списка и запусти таймер",
+    "Start": "Старт",
+    "Reset": "Перезапустить",
+    "Pause": "Пауза",
+    "Resume": "Возобновить"
+}

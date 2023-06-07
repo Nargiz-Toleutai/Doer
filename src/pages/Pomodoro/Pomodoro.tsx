@@ -1,5 +1,6 @@
 import block from 'bem-cn-lite';
 import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 
 import './Pomodoro.scss';
 import {
@@ -21,6 +22,7 @@ const getInititalTimeLeftValue = (startTime: number | null, pauseTime: number | 
 };
 
 export const Pomodoro = () => {
+    const { t } = useTranslation();
     const audioRef = useRef<HTMLAudioElement>(null);
 
     const { startTime, pauseTime, duration } = useAppSelector((state) => state.pomodoro);
@@ -89,17 +91,17 @@ export const Pomodoro = () => {
     return (
         <div className={b()}>
             <div className={b('header')}>
-                <h3>Pomodoro</h3>
+                <h3>{t('Pomodoro')}</h3>
             </div>
             <div className={b('main')}>
                 <Circle progress={progress} displayTime={Math.ceil(displayTime)} />
-                <h6>Control your habits!</h6>
-                <p>Choose any habit from the list and start the timer</p>
+                <h6>{t('Control your habits!')}</h6>
+                <p>{t('Choose any habit from the list and start the timer')}</p>
                 <audio src={alarmAudio} muted ref={audioRef}></audio>
-                {startTime === null && progress === 100 && <button onClick={start}>Start</button>}
-                {startTime === null && progress === 0 && <button onClick={resetTimer}>Reset</button>}
-                {startTime !== null && pauseTime === null && <button onClick={pause}>Pause</button>}
-                {pauseTime !== null && <button onClick={resume}>Resume</button>}
+                {startTime === null && progress === 100 && <button onClick={start}>{t('Start')}</button>}
+                {startTime === null && progress === 0 && <button onClick={resetTimer}>{t('Reset')}</button>}
+                {startTime !== null && pauseTime === null && <button onClick={pause}>{t('Pause')}</button>}
+                {pauseTime !== null && <button onClick={resume}>{t('Resume')}</button>}
             </div>
         </div>
     );

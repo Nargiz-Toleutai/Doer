@@ -1,5 +1,6 @@
 import block from 'bem-cn-lite';
 import React, { useMemo } from 'react';
+import { useTranslation } from 'react-i18next';
 import { useLocation } from 'react-router-dom';
 
 import { AsideNavigationLink } from './AsideNavigationLink';
@@ -11,16 +12,17 @@ import './AsideNavigation.scss';
 const b = block('aside-navigation');
 
 export const AsideNavigation: React.FC = () => {
+  const { t } = useTranslation();
   const location = useLocation();
   const links: AsideNavigationLinkProps[] = useMemo(() => [
-    { id: 'home', title: 'Home', to: '/home', icon: 'home' },
-    { id: 'statistics', title: 'Statistics', to: '/statistics', icon: 'chart' },
-    { id: 'pomodoro', title: 'Pomodoro', to: '/pomodoro', icon: 'pomodoro' },
-  ], []);
+    { id: 'home', title: t('Home'), to: '/home', icon: 'home' },
+    { id: 'statistics', title: t('Statistics'), to: '/statistics', icon: 'chart' },
+    { id: 'pomodoro', title: t('Pomodoro'), to: '/pomodoro', icon: 'pomodoro' },
+  ], [t]);
 
   const additionalLinks: AsideNavigationLinkProps[] = useMemo(() => [
-    { id: 'profile', title: 'Profile', to: '/profile', icon: 'profile' },
-  ], []);
+    { id: 'profile', title: t('Profile'), to: '/profile', icon: 'profile' },
+  ], [t]);
 
   return (
     <aside className={b()}>

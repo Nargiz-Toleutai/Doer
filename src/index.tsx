@@ -7,6 +7,8 @@ import { App } from './App';
 import reportWebVitals from './reportWebVitals';
 import { store } from './store';
 
+import './i18next';
+
 const root = ReactDOM.createRoot(
   document.getElementById('root') as unknown as HTMLElement
 );

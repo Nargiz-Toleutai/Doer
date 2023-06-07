@@ -1,0 +1,26 @@
+{
+    "Home": "Home",
+    "Statistics": "Statistics",
+    "Pomodoro": "Pomodoro",
+    "Profile": "Profile",
+
+    "Today":  "Today",
+    "Tomorrow":  "Tomorrow",
+    "Next 7 Days": "Next 7 Days",
+    "This Month":  "This Month",
+    "Completed": "Completed",
+    "High":  "High",
+    "Medium": "Medium",
+    "Low": "Low",
+    
+    "Nargiza&rsquo;s": "Nargiza&rsquo;s",
+    "Habits":  "Habits",
+    "Priority": "Priority",
+
+    "Control your habits!": "Control your habits!",
+    "Choose any habit from the list and start the timer": "Choose any habit from the list and start the timer",
+    "Start": "Start",
+    "Reset": "Reset",
+    "Pause": "Pause",
+    "Resume": "Resume"
+}

@@ -1,0 +1,74 @@
+@use "../../styles/typography.scss";
+@import "../../styles/palettes.scss";
+
+
+// .aside-panel-profile-item  {
+
+//     display: grid;
+//     grid-column-gap: 8px;
+//     grid-template-columns: 1fr auto;
+//     align-items: center;
+
+//     width: 288px;
+//     height: 40px;
+
+//     box-sizing: border-box;
+
+    
+    
+//     cursor: pointer;
+
+//     color: var(--primary);
+
+//     text-decoration: none;
+//     border-color: transparent;
+//     background-color: var(--aside-panel-menu-background-color);
+
+//     &_selected, &:hover {
+//         background: var(--aside-panel-menu-selected-item-color);
+//         border-radius: 16px;
+//     }
+    
+//     &:hover {
+//         background-color: var(--aside-panel-menu-hover-item-color);
+//     }
+
+//     &__item {
+//         display: flex;
+//         align-items: center;
+//         width: 215px;
+//         height: 20px;
+//         @include typography.secondary;
+//     }
+
+//     &__title {
+//         display: flex;
+//         width: 232px;
+//         height: 20px;
+//         padding-left: 16px;
+//     }
+
+//     .counter__value{
+//         display: flex;
+//         justify-content: center;
+//         align-items: center;
+     
+//         width: 49px;
+//         height: 24px;
+       
+//         background-color: var(--disabled);
+//         color: var(--secondary);
+//         border-radius: 24px;
+//         padding: 4px 8px;
+//     }
+
+   
+
+// }
+
+
+
+  
+
+  
+

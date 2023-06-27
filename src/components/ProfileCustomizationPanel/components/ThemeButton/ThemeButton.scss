@@ -1,0 +1,106 @@
+@use "../../../../styles/typography.scss";
+
+.theme-button {
+    $b: &;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+
+    input[type='radio'] {
+        display: block;
+        margin: 0;
+        width: 93.33px;
+        height: 96px;
+        border-radius: 6px;
+        appearance: none;
+        background-repeat: no-repeat;
+        background-size: cover;
+        cursor: pointer;
+    }
+
+    &__label {
+        $l: &;
+        position: relative;
+        cursor: pointer;
+
+        width: 117.33px;
+        height: 120px;
+        border-radius: 12px;
+        border: 1.5px solid transparent;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        &_background_light {
+            background-color: var(--grey);
+        }
+
+        &_background_dark {
+            background-color: var(--dark-theme-background);
+        }
+
+        &_background_system {
+            background-color: var(--grey);
+        }
+
+        &:has(>input[type='radio']:checked):before {
+            $outset: -4px;
+
+            content: '';
+            position: absolute;
+            top: $outset;
+            bottom: $outset;
+            left: $outset;
+            right: $outset;
+
+            border: 1.5px solid var(--red);
+            border-radius: 16px;
+
+        }
+
+        &:has(>input[type='radio']:checked) {
+
+            &#{$l}_color_red:before {
+                border-color: var(--red);
+            }
+
+            &#{$l}_color_green:before {
+                border-color: var(--green);
+            }
+
+            &#{$l}_color_blue:before {
+                border-color: var(--blue);
+            }
+
+            &#{$l}_color_yellow:before {
+                border-color: var(--yellow);
+            }
+
+            &#{$l}_color_violet:before {
+                border-color: var(--violet);
+            }
+
+            & ~ #{$b}__title {
+                color: var(--primary);
+                @include typography.secondary;
+            }
+        }
+    }
+
+    &__title {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        @include typography.secondary;
+
+        color: var(--placeHolder);
+        padding: 8px;
+
+    }
+}

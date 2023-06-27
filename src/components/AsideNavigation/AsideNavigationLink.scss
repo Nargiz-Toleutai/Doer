@@ -2,30 +2,29 @@
     display: block;
 
     $size: 72px;
-    $padding: 24px;
 
     width: $size;
     height: $size;
 
     box-sizing: border-box;
 
-    padding: $padding;
-    padding-bottom: $padding;
-
+    padding: 24px;
     overflow: hidden;
-
-    color: rgba(255, 255, 255, 0.3);
 
     text-decoration: none;
 
     &_selected, &:hover {
-        color: #FFFFFF;
+        .icon {
+            color: var(--primary);
+        }
     } 
 
-    .icon {
-        font-size: 24px;
+    &:not(&_selected) {
+        .icon {
+            color: var(--disabled);
+            font-size: 24px;
+        }
     }
-
 }
 
 

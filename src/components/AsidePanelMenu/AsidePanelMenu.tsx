@@ -6,7 +6,7 @@ import { AsidePanelMenuItem } from './AsidePanelMenuItem';
 import { AsidePanelMenuItemProps } from './types';
 import './AsidePanelMenu.scss';
 import { CommonFilter, PriorityFilter } from '../../pages/Home/store/types';
-import { HomePageImg } from '../Illustrations';
+import { HomePageImg } from '../Illustrations/HomePage';
 
 const b = block('aside-panel-menu');
 
@@ -28,7 +28,7 @@ export const AsidePanelMenu: React.FC = () => {
 
     return (
         <div className={b()}>
-            <h6>{t('Nargiza&rsquo;s')}</h6>
+            <h6>{t('Nargiza\'s')}</h6>
             <h3>{t('Habits')}</h3>
             <nav>
                 <ul className={b('main')}>

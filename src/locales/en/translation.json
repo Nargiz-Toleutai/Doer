@@ -22,5 +22,11 @@
     "Start": "Start",
     "Reset": "Reset",
     "Pause": "Pause",
-    "Resume": "Resume"
+    "Resume": "Resume",
+
+    "Personal": "Personal",
+    "Customization": "Customization",
+    "Subscription": "Subscription",
+    "Backup": "Backup",
+    "Sign Out": "Sign Out"
 }

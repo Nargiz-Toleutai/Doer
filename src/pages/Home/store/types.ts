@@ -16,4 +16,3 @@ export interface HomeState {
     commonFilterId: CommonFilter,
     priorityFilterId?: PriorityFilter,
 };
-

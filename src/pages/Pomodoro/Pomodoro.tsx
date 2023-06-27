@@ -8,10 +8,10 @@ import {
     DEFAUL_DURATION_IN_SECS,
     UPDATE_INTERVAL_IN_MS,
 } from './constants';
-import { pausePomodoro, resumePomodoro, startPomodoro, stopPomodoro } from './store/slice';
+import { pausePomodoro, resumePomodoro, startPomodoro, stopPomodoro } from './store';
+import { useAppDispatch, useAppSelector } from '../../store/mainStore/hooks/redux';
 import alarmAudio from '../../assets/sounds/alarm.wav';
 import { Circle } from '../../components/Circle';
-import { useAppDispatch, useAppSelector } from '../../store/hooks/redux';
 import { interpolator } from '../../utils/interpolator';
 
 const b = block('pomodoro');

@@ -1,0 +1,13 @@
+.counter__value{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ 
+    width: 49px;
+    height: 24px;
+   
+    background-color: var(--disabled);
+    color: var(--secondary);
+    border-radius: 24px;
+    padding: 4px 8px;
+}

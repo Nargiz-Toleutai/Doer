@@ -1,31 +1,74 @@
 :root {
+    --grey: #E3E3E5;
+    --white: #FFFFFF;
+    --red: #F95B29;
+    --green:  #0CCF71;
+    --blue: #1B74F9;
+    --violet: #724FFF;
+    --yellow: #FDCD1E;
+}
+
+[data-theme="dark"] {
     --aside-navigation-background-color: linear-gradient(0deg, rgba(255, 255, 255, 0.16), rgba(255, 255, 255, 0.16)), rgba(24, 20, 35, 0.8);
     --aside-panel-menu-background-color: #2A2735;
     --aside-panel-menu-selected-item-color: rgba(0, 0, 0, 0.4);
     --aside-panel-menu-hover-item-color: rgba(0, 0, 0, 0.2);
     --main-panel-background-color:#181423;
-  
-    --grey: linear-gradient(0deg, rgba(255, 255, 255, 0.88), rgba(255, 255, 255, 0.88)), #181423;
-    --white: linear-gradient(0deg, rgba(255, 255, 255, 0.88), rgba(255, 255, 255, 0.88)), #181423;
-    --primary-red: #F95B29;
-    --green:  #0CCF71;
-    --blue: #1B74F9;
-    --violet: #724FFF;
-    --yellow: #FDCD1E;
-    --red-light: linear-gradient(0deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), #F95B29;
-    --green-light: linear-gradient(0deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), #0CCF71;
-    --blue-light: linear-gradient(0deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), #1B74F9;
-    --violet-light: linear-gradient(0deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), #724FFF;
-    --yellow-light: linear-gradient(0deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), #FDCD1E;
 
-    --light-theme-primary: #181423;
-    --light-theme-secondary: #181423B2;
-    --light-theme-placeHolder: #18142380;
-    --light-theme-disabled: #1814234D;
+    --primary: #FFFFFF;
+    --secondary: #FFFFFFB2;
+    --placeHolder: #FFFFFF80;
+    --disabled: #FFFFFF4D;
 
-    --dark-theme-primary: #FFFFFF;
-    --dark-theme-secondary: #FFFFFFB2;
-    --dark-theme-placeHolder: #FFFFFF80;
-    --dark-theme-disabled: #FFFFFF4D;
-  }
+    --dark: #181423;
+    --dark-theme-background: #000000;
+    --primary-negative: #FFFFFF;
+}
 
+[data-theme="light"] {
+    --aside-navigation-background-color: #18142329;
+    --aside-panel-menu-background-color: rgba(0, 0, 0, 0.075);
+    --aside-panel-menu-selected-item-color: #e3e1e4;
+    --aside-panel-menu-hover-item-color: rgba(0, 0, 0, 0.2);
+    --main-panel-background-color: #FFFFFF;
+
+    --red-light: #FEDED4;
+    --green-light: #CEF5E3;
+    --blue-light: #D1E3FE;
+    --violet-light: #E3DCFF;
+    --yellow-light: #FFF5D2;
+
+    --primary: #181423;
+    --secondary: #181423B2;
+    --placeHolder: #18142380;
+    --disabled: #1814234D;
+
+    --dark: #181423;
+    --dark-theme-background: #000000;
+    --primary-negative: #ececec;
+}
+
+[data-color-theme="red"] {
+    --accent: var(--red);
+    --accent-light: var(--red-light);
+}
+
+[data-color-theme="blue"] {
+    --accent: var(--blue);
+    --accent-light: var(--blue-light);
+}
+
+[data-color-theme="green"] {
+    --accent: var(--green);
+    --accent-light: var(--green-light);
+}
+
+[data-color-theme="yellow"] {
+    --accent: var(--yellow);
+    --accent-light: var(--yellow-light);
+}
+
+[data-color-theme="violet"] {
+    --accent: var(--violet);
+    --accent-light: var(--violet-light);
+}

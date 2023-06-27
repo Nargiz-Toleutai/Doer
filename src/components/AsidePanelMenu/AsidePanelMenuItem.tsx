@@ -1,22 +1,23 @@
-import block from 'bem-cn-lite';
+// import block from 'bem-cn-lite';
 import * as React from 'react';
-import { useDispatch } from 'react-redux';
 
 import { AsidePanelMenuItemProps } from './types';
-import { setCommonFilter, setPriorityFilter } from '../../pages/Home/store/slice';
+import { useAppDispatch, useAppSelector } from '../../store/mainStore/hooks/redux';
+import { setCommonFilter, setPriorityFilter } from '../../pages/Home/store';
 import { CommonFilter, PriorityFilter } from '../../pages/Home/store/types';
-import { useAppSelector } from '../../store/hooks/redux';
-import { Counter } from '../Counter';
-import './AsidePanelMenuItem.scss';
+import { MenuButton } from '../AsidePanelMenuButton';
 
-const b = block('aside-panel-menu-item');
+import './AsidePanelMenuItem.scss';
+import '../AsidePanelMenuButton/AsidePanelMenuButton.scss';
+
+// const b = block('aside-panel-menu-item');
 
 export const AsidePanelMenuItem: React.FC<AsidePanelMenuItemProps> = ({ id, title, isPriority = false }) => {
   const { commonFilterId, priorityFilterId } = useAppSelector((state) => state.home);
 
   const selected = isPriority ? priorityFilterId === id : commonFilterId === id;
  
-  const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
 
   const onSelect = React.useCallback(() => {
     if (isPriority) {
@@ -26,12 +27,7 @@ export const AsidePanelMenuItem: React.FC<AsidePanelMenuItemProps> = ({ id, titl
   }, [dispatch, id, isPriority, selected]);
 
   return (
-    <button className={b({ selected })} onClick={onSelect}>
-      <div id={id} className={b('item')}>
-        {title}
-      </div>
-      <Counter completed={8} active={12} />
-    </button>
+    <MenuButton menuId={id} onClick={onSelect} title={title} selected={selected} showCounter/>
   );
 };
 

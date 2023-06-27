@@ -1,0 +1,60 @@
+@use "../../styles/typography.scss";
+
+.profile-personal-panel {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+
+    li {
+        list-style: none;
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__body {
+        width: 512px;
+        height: 100%;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__left {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    &__right {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+
+    }
+
+    &__done-button {
+        width: 384px;
+        height: 48px;
+
+        margin-top: 36px;
+
+        background-color: var(--accent);
+        @include typography.header6;
+        color: var(--primary);
+
+        border-radius: 54px;
+        border: none;
+        cursor: pointer;
+    }
+}

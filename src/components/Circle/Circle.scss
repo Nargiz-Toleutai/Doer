@@ -8,7 +8,7 @@
 
 &__circle {
     fill: none;
-    stroke: var(--primary-red);
+    stroke: var(--accent);
     stroke-dasharray: 440;
     transition: stroke-dashoffset 250ms linear;
     transform-origin: center center;
@@ -18,7 +18,7 @@
 &__text {
     @include typography.header3;
     text-anchor: middle;
-    fill: var(--dark-theme-primary);
+    fill: var(--primary);
     dominant-baseline: middle;
 }
 

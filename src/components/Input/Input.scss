@@ -1,0 +1,53 @@
+@use "../../styles/typography.scss";
+
+.input-component {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    position: relative;
+    width: 384px;
+    height: 56px;
+    border: 1px solid var(--placeHolder);
+    border-radius: 16px;
+    padding: 10px;
+    margin: 20px;
+
+    &__label {
+        width: 75px;
+        height: 16px;
+        position: absolute;
+        top: -10px;
+        left: 10px;
+        color: var(--secondary);
+        padding: 0 5px;
+        @include typography.note;
+        background-color: var(--main-panel-background-color);
+    }
+
+    &__input {
+        width: 320px;
+        height: 20px;
+        border: none;
+        outline: none;
+
+        margin: 12px 48px 8px 6px;
+        background: transparent;
+        color: var(--secondary);
+        @include typography.secondary;
+    }
+
+    &__button {
+        background-color: transparent;
+        border: none;
+    }
+
+    .icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--primary);
+        background-color: transparent;
+        border: none;
+    }
+}

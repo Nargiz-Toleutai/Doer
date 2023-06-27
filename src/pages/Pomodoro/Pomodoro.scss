@@ -6,7 +6,7 @@
     justify-content: flex-start;
 
     background-color: var(--main-panel-background-color);
-    color: var(--dark-theme-primary);
+    color: var(--primary);
 
     &__header {
         display: flex;
@@ -49,7 +49,7 @@
             align-items: center;
 
             @include typography.note;
-            color: var(--dark-theme-secondary);
+            color: var(--secondary);
 
             width: 488px;
             height: 16px;
@@ -58,9 +58,10 @@
 
         button {
             @include typography.header6;
-            color: var(--dark-theme-primary);
+            color: var(--primary);
+            cursor: pointer;
 
-            background-color: var(--primary-red);
+            background-color: var(--accent);
             border-color: transparent;
             border-radius: 32px;
 
@@ -68,38 +69,4 @@
             height: 48px;
         }
     }
-
-
-    // &__timer {
-    //     position: relative;
-    //     width: 360px;
-    //     height: 360px;
-    // }
-
-    // &__circle {
-    //     fill: none;
-    //     stroke: var(--primary-red);
-    //     stroke-dasharray: 440;
-    //     transition: stroke-dashoffset 250ms linear;
-    //     transform-origin: center center;
-    //     transform: rotate(-90deg);
-    // }
-
-    // &__text {
-    //     // fill: #1abc9c;
-    //     @include typography.header3;
-    //     text-anchor: middle;
-    //     fill: var(--dark-theme-primary);
-    //     dominant-baseline: middle;
-    // }
-
-    // @keyframes countdown {
-    //     0% {
-    //         stroke-dashoffset: 440;
-    //     }
-
-    //     100% {
-    //         stroke-dashoffset: 0;
-    //     }
-    // }
 };

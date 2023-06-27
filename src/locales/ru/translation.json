@@ -23,5 +23,11 @@
     "Start": "Старт",
     "Reset": "Перезапустить",
     "Pause": "Пауза",
-    "Resume": "Возобновить"
+    "Resume": "Возобновить",
+
+    "Personal": "Личное",
+    "Customization": "Настройки",
+    "Subscription": "Подписка",
+    "Backup": "Резервная копия",
+    "Sign Out": "Выйти"
 }

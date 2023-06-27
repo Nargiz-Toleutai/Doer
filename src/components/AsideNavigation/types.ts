@@ -4,4 +4,4 @@ export interface AsideNavigationLinkProps {
   to: string;
   icon: string;
   selected?: boolean;
-};
+}

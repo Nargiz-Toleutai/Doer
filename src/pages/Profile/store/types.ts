@@ -3,9 +3,9 @@ export enum MainProfile {
     Customization = 'customization',
     Subscription = 'subscription',
     Backup = 'backup',
-};
+}
 
 
 export interface ProfileState {
     sectionId: MainProfile,
-};
+}

@@ -1,4 +1,4 @@
-import { HTMLAttributes } from 'react';
+import React, { HTMLAttributes } from 'react';
 
 export interface MenuButtonProps<T> extends HTMLAttributes<HTMLElement>{
     menuId: T,
@@ -7,5 +7,8 @@ export interface MenuButtonProps<T> extends HTMLAttributes<HTMLElement>{
     showCounter?: boolean,
     icon?: string,
     name?: string;
+    showCheckBox?: boolean,
+    onCheckedChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
+    checked?: boolean,
 }
 

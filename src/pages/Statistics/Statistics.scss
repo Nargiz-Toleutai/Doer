@@ -1,0 +1,64 @@
+@use "../../styles/typography.scss";
+
+.statistics{
+  $padding: 16px;
+
+  position: relative;
+  box-sizing: border-box;
+
+  height: 100%;
+  width: 320px;
+  max-width: 320px;
+  padding: $padding;
+
+  overflow-y: scroll;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+
+  background-color: var(--aside-panel-menu-background-color);
+
+  border-radius: 0;
+
+  &__main {
+    margin: 0;
+    padding: 0;
+
+    li {
+      list-style: none;
+    }
+  }
+
+  h6 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    @include typography.header6;
+    gap: 8px;
+    margin: 10px 0 10px 8px;
+    height: 20px;
+    color: var(--placeHolder);
+
+    &:first-of-type{
+      color: var(--primary)
+    }
+  }
+
+  h3 {
+    @include typography.header3;
+    margin: 0 0 21px 8px;
+    height: 42px;
+  }
+
+  hr {
+    border: none;
+    color: var(--disabled);
+    border-top: 2px dotted;
+    height: 0;
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+}

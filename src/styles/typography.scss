@@ -1,5 +1,7 @@
+$font-family: 'Inter';
+
 @mixin header1 {
-    font-family: 'Inter';
+    font-family: $font-family;
     font-style: normal;
     font-weight: 700;
     font-size: 60px;
@@ -7,7 +9,7 @@
 }
 
 @mixin header2 {
-    font-family: 'Inter';
+    font-family: $font-family;
     font-style: normal;
     font-weight: 700;
     font-size: 48px;
@@ -15,7 +17,7 @@
 }
 
 @mixin header3 {
-    font-family: 'Inter';
+    font-family: $font-family;
     font-style: normal;
     font-weight: 700;
     font-size: 34px;
@@ -23,7 +25,7 @@
 }
 
 @mixin header4 {
-    font-family: 'Inter';
+    font-family: $font-family;
     font-style: normal;
     font-weight: 700;
     font-size: 24px;
@@ -32,7 +34,7 @@
 }
 
 @mixin header5 {
-    font-family: 'Inter';
+    font-family: $font-family;
     font-style: normal;
     font-weight: 700;
     font-size: 20px;
@@ -41,7 +43,7 @@
 }
 
 @mixin header6 {
-    font-family: 'Inter';
+    font-family: $font-family;
     font-style: normal;
     font-weight: 700;
     font-size: 16px;
@@ -50,7 +52,7 @@
 }
 
 @mixin subtitle {
-    font-family: 'Inter';
+    font-family: $font-family;
     font-style: normal;
     font-weight: 500;
     font-size: 34px;
@@ -58,7 +60,7 @@
 }
 
 @mixin body {
-    font-family: 'Inter';
+    font-family: $font-family;
     font-style: normal;
     font-weight: 500;
     font-size: 20px;
@@ -67,7 +69,7 @@
 }
 
 @mixin bodyHigh {
-    font-family: 'Inter';
+    font-family: $font-family;
     font-style: normal;
     font-weight: 500;
     font-size: 20px;
@@ -76,7 +78,7 @@
 }
 
 @mixin secondary {
-    font-family: 'Inter';
+    font-family: $font-family;
     font-style: normal;
     font-weight: 500;
     font-size: 16px;
@@ -85,7 +87,7 @@
 }
 
 @mixin secondaryHigh {
-    font-family: 'Inter';
+    font-family: $font-family;
     font-style: normal;
     font-weight: 500;
     font-size: 16px;
@@ -94,7 +96,7 @@
 }
 
 @mixin note {
-    font-family: 'Inter';
+    font-family: $font-family;
     font-style: normal;
     font-weight: 500;
     font-size: 12px;
@@ -103,7 +105,7 @@
 }
 
 @mixin noteAccent {
-    font-family: 'Inter';
+    font-family: $font-family;
     font-style: normal;
     font-weight: 700;
     font-size: 12px;

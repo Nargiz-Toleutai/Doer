@@ -16,7 +16,7 @@
     }
 
 
-    &__body {
+    &__form {
         width: 512px;
         height: 100%;
 
@@ -47,18 +47,6 @@
     }
 
 
-    &__left {
-        position: absolute;
-        top: 0;
-        left: 0;
-    }
-
-    &__right {
-        position: absolute;
-        bottom: 0;
-        right: 0;
-
-    }
 
 
 

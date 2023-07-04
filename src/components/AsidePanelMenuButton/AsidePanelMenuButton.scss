@@ -11,7 +11,7 @@
 
     box-sizing: border-box;
 
-    padding: 5px 65px 5px 8px;
+    padding: 5px 8px;
     
     cursor: pointer;
 
@@ -22,12 +22,12 @@
     background-color: transparent;
 
     &_selected, &:hover {
-        background: var(--aside-panel-menu-selected-item-color);
+        background: var(--selected-item-color);
         border-radius: 16px;
     }
     
     &:hover {
-        background-color: var(--aside-panel-menu-hover-item-color);
+        background-color: var(--hover-item-color);
     }
 
     &__item {

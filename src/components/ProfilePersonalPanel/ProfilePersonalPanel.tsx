@@ -13,23 +13,17 @@ import {ProfilePhoto} from '../ProfilePhoto';
 const b = block('profile-personal-panel');
 
 export const ProfilePersonalPanel: React.FC = () => {
-    const { t } = useTranslation();
+    const {t} = useTranslation();
     return (
         <div className={b()}>
-            <div className={b('left')}>
-                <ProfilePersonalPageLeftImg />
-            </div>
-            <div className={b('body')}>
-                <ProfilePhoto colorId={CommonColor.Violet}/>
-                <form className={b('form')}>
-                    <Input id='FirstName' title={t('First Name')} deleteButton />
-                    <Input id='FirstName' title={t('First Name')} deleteButton />
-                    <button type="submit" value="Done" className={b('done-button')}>{t('Done')}</button>
-                </form>
-            </div>
-            <div className={b('right')}>
-                <ProfilePersonalPageRightImg />
-            </div>
+            <ProfilePersonalPageLeftImg/>
+            <ProfilePhoto colorId={CommonColor.Violet}/>
+            <form className={b('form')}>
+                <Input id='FirstName' title={t('First Name')} resetButton/>
+                <Input id='FirstName' title={t('First Name')} resetButton/>
+                <button type="submit" value="Done" className={b('done-button')}>{t('Done')}</button>
+            </form>
+            <ProfilePersonalPageRightImg/>
         </div>
     );
 };

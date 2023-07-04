@@ -1,0 +1,31 @@
+@use "../../styles/typography.scss";
+
+.profile-back-up-panel {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+
+  &__form {
+    width: 512px;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+
+    hr {
+      border: none;
+      color: var(--disabled);
+      border-top: 2px dotted;
+      height: 0;
+      width: 320px;
+      margin: 0;
+    }
+  }
+}

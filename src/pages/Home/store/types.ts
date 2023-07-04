@@ -4,7 +4,7 @@ export enum CommonFilter {
     Next7Days = 'next7Days',
     ThisMonth = 'thisMonth',
     Completed = 'completed'
-};
+}
 
 export enum PriorityFilter {
     High = 'high',
@@ -15,4 +15,4 @@ export enum PriorityFilter {
 export interface HomeState {
     commonFilterId: CommonFilter,
     priorityFilterId?: PriorityFilter,
-};
+}

@@ -1,0 +1,70 @@
+@use "../../styles/typography.scss";
+
+.profile-subscription-panel {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+
+  background-color: transparent;
+  color: var(--primary);
+
+  h4 {
+    margin: 24px;
+  }
+
+  h6 {
+    @include typography.header6;
+    color: var(--primary);
+    margin: 0;
+    padding: 0;
+  }
+
+  p {
+    @include typography.note;
+    color: var(--placeHolder);
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+
+    p {
+      margin-top: 8px;
+      margin-bottom: 8px;
+      padding: 0;
+    }
+  }
+
+  &__submit-button {
+    width: 384px;
+    height: 48px;
+    margin-top: -8px;
+    background-color: var(--accent);
+    @include typography.header6;
+    color: var(--primary);
+    border-radius: 54px;
+    border: none;
+    cursor: pointer;
+  }
+
+  &__restore-button {
+    width: 384px;
+    height: 48px;
+    display: flex;
+    padding: 14px 16px;
+    border-radius: 32px;
+    background-color: transparent;
+    border: none;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    @include typography.header6
+  }
+}

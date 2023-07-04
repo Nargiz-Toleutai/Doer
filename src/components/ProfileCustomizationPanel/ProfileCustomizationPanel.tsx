@@ -18,7 +18,7 @@ import './ProfileCustomizationPanel.scss';
 const b = block('profile-customization-panel');
 
 export const ProfileCustomizationPanel: React.FC = () => {
-    const {colorId: currentColorId, themeId: currentThemeId } = useAppSelector((state) => state.theme);
+    const {colorId: currentColorId, themeId: currentThemeId} = useAppSelector((state) => state.theme);
 
     const dispatch = useAppDispatch();
 
@@ -47,8 +47,8 @@ export const ProfileCustomizationPanel: React.FC = () => {
 
     return (
         <div className={b()}>
-            <ProfileCustomizationPageLeftImg className={b('left')}/>
-            <form className={b('body')}>
+            <ProfileCustomizationPageLeftImg/>
+            <form className={b('form')}>
                 <h4>{t('Choose your style')}</h4>
                 <div className={b('theme-options')}>
                     {themeSections.map((theme) => (
@@ -73,9 +73,7 @@ export const ProfileCustomizationPanel: React.FC = () => {
                     ))}
                 </div>
             </form>
-            <div className={b('right')}>
-                <ProfileCustomizationPageRightImg/>
-            </div>
+            <ProfileCustomizationPageRightImg/>
         </div>
     );
 };

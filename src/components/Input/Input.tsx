@@ -8,13 +8,13 @@ import { Icon } from '../Icon';
 
 const b = block('input-component');
 
-export const Input: React.FC<InputProps> = ({ id, title, deleteButton }) => {
+export const Input: React.FC<InputProps> = ({ id, title, resetButton, labelInside= false }) => {
     return <div className={b()}>
-        <label className={b('label')}>
+        <label className={b('label', { inside: labelInside})}>
         {title}
             <input className={b('input')} />
         </label>
-        {deleteButton && <button className={b('button')}><Icon name='reset' size={24} className={b('delete-button')} /></button>}
+        {resetButton && <button className={b('button')}><Icon name='reset' size={24} className={b('delete-button')} /></button>}
     </div>
 }
 

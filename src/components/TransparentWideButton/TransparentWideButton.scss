@@ -1,0 +1,60 @@
+@use "../../../styles/typography.scss";
+
+.plan-button {
+  display: flex;
+
+  padding: 14px 16px 14px 16px;
+
+  border-radius: 16px;
+
+  width: 384px;
+  height: 76px;
+  color: var(--primary);
+  background-color: var(--aside-panel-menu-background-color);
+
+  &__info {
+    display: flex;
+
+    width: 70%;
+    height: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+
+  }
+
+  &__title {
+    width: 50%;
+    padding-bottom: 4px;
+    @include typography.secondary;
+
+  }
+
+  &__price {
+    display: flex;
+    width: 70%;
+    color: var(--placeHolder);
+    @include typography.note;
+
+    h5 {
+      @include typography.header5;
+      margin: 0;
+      padding: 0;
+    }
+
+    p {
+      margin: 0;
+      padding-top: 6px;
+    }
+  }
+  &__active {
+    @include typography.note;
+    color: var(--dark);
+    width: 135px;
+    height: 24px;
+    padding: 4px 8px 4px 4px;
+    border-radius: 24px;
+    background-color: var(--primary);
+  }
+
+}

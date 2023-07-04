@@ -1,0 +1,95 @@
+@use "../../styles/typography.scss";
+
+.select-button {
+  $b: &;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  background-color: transparent;
+  border: none;
+  color: var(--primary);
+
+  input[type='radio'] {
+    display: none;
+
+  }
+
+  &__label {
+    $l: &;
+    position: relative;
+    cursor: pointer;
+
+    padding: 14px 16px 14px 16px;
+    width: 384px;
+    height: 76px;
+    border-radius: 16px;
+    border: 1.5px solid transparent;
+    display: flex;
+    flex-direction: row;
+
+    background-color: var(--aside-panel-menu-background-color);
+
+
+    &:has(~ input[type='radio']:checked):before {
+      $outset: -4px;
+
+      content: '';
+      position: absolute;
+      top: $outset;
+      bottom: $outset;
+      left: $outset;
+      right: $outset;
+
+      border: 1.5px solid var(--accent);
+      border-radius: 16px;
+      background-color: var(--accent-light);
+    }
+  }
+
+    &__info {
+    width: 60%;
+    height: 100%;
+
+  }
+
+  &__title {
+    padding-bottom: 4px;
+    @include typography.secondary;
+
+  }
+
+  &__price {
+    display: flex;
+    width: 70%;
+    color: var(--placeHolder);
+    @include typography.note;
+
+    h5 {
+      @include typography.header5;
+      margin: 0;
+      padding: 0;
+    }
+
+    p {
+      margin: 0 0 0 4px;
+      padding-top: 6px;
+
+    }
+  }
+
+  &__active {
+    display: flex;
+    justify-content: center;
+    @include typography.note;
+    color: var(--dark);
+    width: 135px;
+    height: 24px;
+    padding: 4px 8px 4px 4px;
+    border-radius: 24px;
+    background-color: var(--accent);
+  }
+
+
+}

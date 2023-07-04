@@ -11,12 +11,14 @@ import {
 } from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
 
+import { slice as backUpSlice} from '../../components/ProfileBackUpPanel/store/slice';
 import { slice as avatarSlice } from '../../components/ProfilePhoto/store/slice'
+import { slice as planSlice } from '../../components/ProfileSubscriptionPanel/store/slice'
 import { slice as homeSlice } from '../../pages/Home/store/slice';
 import { slice as pomodoroSlice } from '../../pages/Pomodoro/store/slice';
 import { slice as profileSlice } from '../../pages/Profile/store/slice';
+import { slice as statisticsSlice } from '../../pages/Statistics/store/slice';
 import { slice as themeSlice } from '../themeStore/slice';
-
 
 const persistConfig = {
     key: 'root',
@@ -30,6 +32,9 @@ const rootReducer = combineReducers({
     [profileSlice.name]: profileSlice.reducer,
     [avatarSlice.name]: avatarSlice.reducer,
     [themeSlice.name]: themeSlice.reducer,
+    [planSlice.name]: planSlice.reducer,
+    [backUpSlice.name]: backUpSlice.reducer,
+    [statisticsSlice.name]: statisticsSlice.reducer,
 });
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);

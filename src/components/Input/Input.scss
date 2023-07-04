@@ -23,6 +23,12 @@
         padding: 0 5px;
         @include typography.note;
         background-color: var(--main-panel-background-color);
+
+        //&_inside {
+        //    top: 10px;
+        //    background-color: transparent;
+        //    color: var(--primary);
+        //}
     }
 
     &__input {

@@ -2,15 +2,15 @@ import block from 'bem-cn-lite';
 import React, { useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 
-import { AsidePanelMenuItem } from './AsidePanelMenuItem';
-import { AsidePanelMenuItemProps } from './types';
-import './AsidePanelMenu.scss';
 import { CommonFilter, PriorityFilter } from '../../pages/Home/store/types';
+import { AsidePanelMenuItem } from '../AsidePanelMenuItem';
+import { AsidePanelMenuItemProps } from '../AsidePanelMenuItem/types';
+import './AsideHomePanelMenu.scss';
 import { HomePageImg } from '../Illustrations/HomePage';
 
 const b = block('aside-panel-menu');
 
-export const AsidePanelMenu: React.FC = () => {
+export const AsideHomePanelMenu: React.FC = () => {
     const { t } = useTranslation();
     const links: AsidePanelMenuItemProps[] = useMemo(() => [
         { id: CommonFilter.Today, title: t('Today'), counter: { completed: 0, active: 0 } },

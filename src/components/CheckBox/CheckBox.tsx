@@ -11,7 +11,7 @@ export const CheckBox: React.FC<CheckBoxProps> = ({ checked, onCheckedChange}) =
         <div className={b()}>
             <input
                 type="checkbox"
-                id="checkBox"
+                id={`checkBox-${Math.random()}`}
                 name="checkBox"
                 checked={checked}
                 onChange={onCheckedChange}

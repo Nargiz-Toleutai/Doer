@@ -1,0 +1,16 @@
+@use '../../styles/typography.scss';
+
+.colorful-wide-button {
+  width: 384px;
+  height: 48px;
+
+  margin-top: 32px;
+
+  background-color: var(--accent);
+  @include typography.header6;
+  color: var(--primary);
+
+  border-radius: 54px;
+  border: none;
+  cursor: pointer;
+}

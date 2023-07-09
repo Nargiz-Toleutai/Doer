@@ -4,11 +4,13 @@ import {useTranslation} from 'react-i18next';
 
 import './ProfileSubscriptionPanel.scss';
 import {PlanType} from './store/types';
+import {ColorfulWideButton} from '../ColorfulWideButton';
 import {ProfileSubscriptionPageLeftImg} from '../Illustrations/ProfileSubscriptionPage/ProfileSubscriptionPageLeftImg';
 import {
     ProfileSubscriptionPageRightImg
 } from '../Illustrations/ProfileSubscriptionPage/ProfileSubscriptionPageRightImg';
 import {SelectButton} from '../SelectButton';
+import {TransparentWideButton} from '../TransparentWideButton';
 
 
 const b = block('profile-subscription-panel');
@@ -41,14 +43,19 @@ export const ProfileSubscriptionPanel: React.FC = () => {
                     />
                 ))}
                 <p>Plan automatically renews monthly until cancelled</p>
-                <button className={b('restore-button')}>Restore purchase</button>
-                <button
-                    type="submit"
-                    value="submit"
-                    className={b('submit-button')}
-                >{t('Start your 7-day free trial')}</button>
+                <TransparentWideButton title={t('Restore purchase')}/>
+                <ColorfulWideButton title={t('Start your 7-day free trial')}/>
             </form>
             <ProfileSubscriptionPageRightImg/>
         </div>
     );
 };
+/*
+  <button
+                    type="submit"
+                    value="submit"
+                    className={b('submit-button')}
+                >{t('Start your 7-day free trial')}</button>
+
+                  <button className={b('restore-button')}>Restore purchase</button>
+ */

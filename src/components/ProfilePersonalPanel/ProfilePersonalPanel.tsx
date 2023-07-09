@@ -4,6 +4,7 @@ import {useTranslation} from 'react-i18next';
 
 import './ProfilePersonalPanel.scss';
 import {CommonColor} from '../../store/themeStore/types';
+import {ColorfulWideButton} from '../ColorfulWideButton';
 import {ProfilePersonalPageLeftImg} from '../Illustrations/ProfilePersonalPage/ProfilePersonalPageLeftImg';
 import {ProfilePersonalPageRightImg} from '../Illustrations/ProfilePersonalPage/ProfilePersonalPageRightImg';
 import {Input} from '../Input';
@@ -21,9 +22,11 @@ export const ProfilePersonalPanel: React.FC = () => {
             <form className={b('form')}>
                 <Input id='FirstName' title={t('First Name')} resetButton/>
                 <Input id='FirstName' title={t('First Name')} resetButton/>
-                <button type="submit" value="Done" className={b('done-button')}>{t('Done')}</button>
+                <ColorfulWideButton title={t('Done')}/>
             </form>
             <ProfilePersonalPageRightImg/>
         </div>
     );
 };
+
+// <button type="submit" value="Done" className={b('done-button')}>{t('Done')}</button>

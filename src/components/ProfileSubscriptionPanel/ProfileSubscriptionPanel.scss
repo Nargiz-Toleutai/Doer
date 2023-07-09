@@ -42,29 +42,7 @@
     }
   }
 
-  &__submit-button {
-    width: 384px;
-    height: 48px;
+  .colorful-wide-button {
     margin-top: -8px;
-    background-color: var(--accent);
-    @include typography.header6;
-    color: var(--primary);
-    border-radius: 54px;
-    border: none;
-    cursor: pointer;
-  }
-
-  &__restore-button {
-    width: 384px;
-    height: 48px;
-    display: flex;
-    padding: 14px 16px;
-    border-radius: 32px;
-    background-color: transparent;
-    border: none;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    @include typography.header6
   }
 }

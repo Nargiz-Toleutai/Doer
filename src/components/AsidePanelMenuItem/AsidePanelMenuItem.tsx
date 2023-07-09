@@ -4,7 +4,6 @@ import * as React from 'react';
 import { AsidePanelMenuItemProps } from './types';
 import { setCommonFilter, setPriorityFilter } from '../../pages/Home/store';
 import { CommonFilter, PriorityFilter } from '../../pages/Home/store/types';
-import {CommonPanel, Filters} from '../../pages/Statistics/store/types';
 import { useAppDispatch, useAppSelector } from '../../store/mainStore/hooks/redux';
 import { MenuButton } from '../AsidePanelMenuButton';
 

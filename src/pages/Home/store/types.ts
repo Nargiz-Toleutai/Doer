@@ -11,8 +11,8 @@ export enum PriorityFilter {
     Medium = 'medium',
     Low = 'low',
 }
-
 export interface HomeState {
     commonFilterId: CommonFilter,
     priorityFilterId?: PriorityFilter,
 }
+

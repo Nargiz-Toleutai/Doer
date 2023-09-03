@@ -1,0 +1,94 @@
+$gap: 20px;
+@use "../../styles/typography.scss";
+
+//.switch-button {
+
+  //> div {
+  //  margin-bottom: $gap;
+  //}
+  //
+  //&.list-view {
+  //  display: flex;
+  //  flex-direction: column;
+  //}
+  //
+  //&.grid-view {
+  //  display: grid;
+  //  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  //  gap: $gap;
+  //}
+
+
+
+.switch-button {
+  @include typography.secondary;
+  cursor: pointer;
+  display: inline-block;
+  margin-left: 5px;
+  position: relative;
+  top: 2px;
+
+  &,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  &__list {
+    display: flex;
+    padding: 6px 12px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+  }
+
+  &__grid {
+    display: flex;
+    padding: 6px 6px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+  }
+
+  &__toggle-switch {
+    display: flex;
+
+    align-items: flex-start;
+    border: solid 1px #5c5964;
+    border-radius: 24px;
+    width: 168px;
+    height: 38px;
+    position: relative;
+    vertical-align: middle;
+    transition: background 0.25s;
+
+    &::before,
+    &::after {
+      content: "";
+    }
+
+    &::before {
+      display: block;
+      background: var(--disabled);
+      border-radius: 24px;
+      box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.25);
+      width: 79px;
+      height: 32px;
+      position: absolute;
+      top: 2px;
+      left: 2px;
+      transition: left 0.25s;
+    }
+  }
+
+  &__toggle-checkbox:checked + &__toggle-switch {
+    &::before {
+      left: 85px;
+    }
+  }
+
+  &__toggle-checkbox {
+    position: absolute;
+    visibility: hidden;
+  }
+}

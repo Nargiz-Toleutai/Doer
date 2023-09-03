@@ -1,4 +1,3 @@
-// import block from 'bem-cn-lite';
 import * as React from 'react';
 
 import { AsidePanelMenuItemProps } from './types';
@@ -9,12 +8,11 @@ import { MenuButton } from '../AsidePanelMenuButton';
 
 import '../AsidePanelMenuButton/AsidePanelMenuButton.scss';
 
-
-export const AsidePanelMenuItem: React.FC<AsidePanelMenuItemProps> = ({ id, title, isPriority = false }) => {
+export const AsidePanelMenuItem: React.FC<AsidePanelMenuItemProps> = ({ id, title, isPriority = false}) => {
   const { commonFilterId, priorityFilterId } = useAppSelector((state) => state.home);
 
   const selected = isPriority ? priorityFilterId === id : commonFilterId === id;
- 
+
   const dispatch = useAppDispatch();
 
   const onSelect = React.useCallback(() => {

@@ -1,5 +1,5 @@
 import block from 'bem-cn-lite';
-import React from 'react';
+import React, { useState } from 'react';
 
 import { InputProps } from './types';
 import './Input.scss';

@@ -1,0 +1,40 @@
+@use '../../styles/typography.scss';
+
+  .bar-graph {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    border-radius: 16px;
+    padding: 16px;
+    gap: 16px;
+    background-color: var(--aside-panel-menu-background-color);
+    width: 100%;
+    height: 80px;
+
+
+  &__list {
+    display: flex;
+    align-items: flex-end;
+    column-gap: 6px;
+    height: 100%;
+  }
+
+    &__title {
+      @include typography.note;
+      color: var(--placeHolder);
+
+    }
+
+    &__text {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+    }
+
+    &__value {
+      @include typography.header4;
+    }
+
+}
+

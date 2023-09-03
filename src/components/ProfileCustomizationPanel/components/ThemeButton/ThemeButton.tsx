@@ -4,8 +4,8 @@ import React from 'react';
 import {ThemeProps} from './types';
 import {backgroundMap} from './utils';
 import './ThemeButton.scss';
-import {CommonTheme} from '../../../../store/themeStore/types';
 import {useThemeDetector} from '../../../../hooks/useThemeDetector';
+import {CommonTheme} from '../../../../store/themeStore/types';
 import {getBase64Svg} from '../../../../utils/svg';
 
 

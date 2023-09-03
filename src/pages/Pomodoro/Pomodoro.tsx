@@ -4,20 +4,20 @@ import { useTranslation } from 'react-i18next';
 
 import './Pomodoro.scss';
 import {
-    DEFAUL_DURATION_IN_MS,
-    DEFAUL_DURATION_IN_SECS,
+    DEFAULT_DURATION_IN_MS,
+    DEFAULT_DURATION_IN_SECS,
     UPDATE_INTERVAL_IN_MS,
 } from './constants';
 import { pausePomodoro, resumePomodoro, startPomodoro, stopPomodoro } from './store';
-import { useAppDispatch, useAppSelector } from '../../store/mainStore/hooks/redux';
 import alarmAudio from '../../assets/sounds/alarm.wav';
 import { Circle } from '../../components/Circle';
+import { useAppDispatch, useAppSelector } from '../../store/mainStore/hooks/redux';
 import { interpolator } from '../../utils/interpolator';
 
 const b = block('pomodoro');
 
 const getInititalTimeLeftValue = (startTime: number | null, pauseTime: number | null, duration: number | null ): number => {
-    if(!startTime || !duration) return DEFAUL_DURATION_IN_MS;
+    if(!startTime || !duration) return DEFAULT_DURATION_IN_MS;
     return duration - ((pauseTime ?? Date.now()) - startTime);
 };
 
@@ -30,7 +30,7 @@ export const Pomodoro = () => {
     
     const [timeLeft, setTimeLeft] = useState(() => getInititalTimeLeftValue(startTime, pauseTime, duration));
 
-    const currentDuration = duration ?? DEFAUL_DURATION_IN_MS;
+    const currentDuration = duration ?? DEFAULT_DURATION_IN_MS;
 
     const interpolateProgress = useMemo(() => interpolator(0, 100, currentDuration), [currentDuration]);
     const interpolateTime = useMemo(() => interpolator(0, currentDuration / 1000, currentDuration), [currentDuration]);
@@ -73,12 +73,12 @@ export const Pomodoro = () => {
     }, [startTime, pauseTime, duration, dispatch, playSound, stopSound]);
 
      const resetTimer = useCallback(() => {
-        setTimeLeft(DEFAUL_DURATION_IN_SECS * 1000)
+        setTimeLeft(DEFAULT_DURATION_IN_SECS * 1000)
         stopSound();
     }, [stopSound]);
 
     const start = () => dispatch(startPomodoro({
-        duration: DEFAUL_DURATION_IN_SECS * 1000,
+        duration: DEFAULT_DURATION_IN_SECS * 1000,
     }))
 
     const pause = () => dispatch(pausePomodoro());

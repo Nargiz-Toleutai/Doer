@@ -15,9 +15,9 @@ const b = block('statistics');
 export const Statistics: React.FC = () => {
     const {t} = useTranslation();
     const links: AsidePanelMenuItemProps[] = useMemo(() => [
-        {id: CommonPanel.Daily, title: t('Daily'), counter: {completed: 0, active: 0}},
-        {id: CommonPanel.Week, title: t('Week'), counter: {completed: 0, active: 0}},
-        {id: CommonPanel.Month, title: t('Month'), counter: {completed: 0, active: 0}},
+        {id: CommonPanel.Daily, title: t('Daily'), to: '/daily', counter: {completed: 0, active: 0}},
+        {id: CommonPanel.Week, title: t('Week'), to: 'week', counter: {completed: 0, active: 0}},
+        {id: CommonPanel.Month, title: t('Month'), to: 'month', counter: {completed: 0, active: 0}},
     ], [t]);
 
     const additionalLinks: StatisticsItemProps[] = useMemo(() => [

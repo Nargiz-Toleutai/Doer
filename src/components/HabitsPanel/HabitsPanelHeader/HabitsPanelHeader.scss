@@ -1,0 +1,42 @@
+@use "../../../styles/typography.scss";
+
+.habits-panel-header {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+
+  &__left {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    gap: 16px;
+    align-items: center;
+  }
+
+  h3 {
+    @include typography.header3;
+    margin: 0;
+  }
+
+
+  &__grid-view {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+  }
+
+  &__list-view {
+    display: flex;
+    flex-direction: column;
+
+    > div {
+      margin-bottom: 20px;
+    }
+  }
+  //&__list-view > div {
+  //  margin-bottom: 20px;
+  //}
+}

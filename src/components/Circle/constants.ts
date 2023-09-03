@@ -1,2 +1,2 @@
-export const CAPACITY_OF_DASH_ARRAY = 440; // rename, not clear (is it releated to SVG dash-arrays?)
-export const ANIMATION_END_OF_DASH_ARRAY = 154; // rename not clear (is it releated to SVG dash-arrays?)
+export const CAPACITY_OF_DASH_ARRAY = 440;
+export const ANIMATION_END_OF_DASH_ARRAY = 154;

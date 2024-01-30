@@ -22,7 +22,6 @@ export const ProfilePhoto: React.FC <ProfilePhotoProps> = ({ colorId }) => {
         const reader = new FileReader();
 
         reader.onloadend = () => {
-
             dispatch(updateAvatar(reader.result as string));
         };
 

@@ -1,0 +1,28 @@
+@use "../../styles/typography.scss";
+
+.radio-button {
+  position: relative;
+  border-radius: 24px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  &__title {
+    cursor: pointer;
+    z-index: 1;
+    @include typography.secondary
+  }
+
+
+  &__input {
+    display: none;
+  }
+
+
+  .icon {
+    color: var(--primary);
+    z-index: 1;
+  }
+}
+

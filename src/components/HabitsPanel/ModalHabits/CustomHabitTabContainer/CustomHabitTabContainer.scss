@@ -1,0 +1,41 @@
+@use '../../../../styles/typography.scss';
+
+.custom-habit-tab-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 16px 0;
+
+  &__title {
+    @include typography.header5;
+    display: flex;
+    padding: 16px 0 16px 0;
+    align-items: flex-start;
+    align-self: stretch;
+  }
+
+  &__habit-name {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    width: 100%;
+  }
+
+  &__description {
+    @include typography.secondaryHigh;
+    display: flex;
+    padding-bottom: 24px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .input-component {
+    width: 100%;
+    margin: 8px;
+  }
+
+
+
+}

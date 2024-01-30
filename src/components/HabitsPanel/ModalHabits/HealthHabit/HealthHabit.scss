@@ -1,0 +1,7 @@
+@use '../../../../styles/typography.scss';
+
+.health-habit {
+  @include typography.secondaryHigh;
+
+
+}

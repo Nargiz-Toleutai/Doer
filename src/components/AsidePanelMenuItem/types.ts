@@ -5,6 +5,7 @@ export interface AsidePanelMenuItemProps {
     id: CommonFilter | PriorityFilter | CommonPanel | Filters;
     title: string;
     isPriority?: boolean;
+    icon?: string,
     counter?: {
         completed: number;
         active: number;

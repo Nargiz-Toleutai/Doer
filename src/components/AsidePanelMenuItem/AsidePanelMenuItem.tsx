@@ -4,9 +4,9 @@ import { AsidePanelMenuItemProps } from './types';
 import { setCommonFilter, setPriorityFilter } from '../../pages/Home/store';
 import { CommonFilter, PriorityFilter } from '../../pages/Home/store/types';
 import { useAppDispatch, useAppSelector } from '../../store/mainStore/hooks/redux';
-import { MenuButton } from '../AsidePanelMenuButton';
+import { MenuButton } from '../MenuButton';
 
-import '../AsidePanelMenuButton/AsidePanelMenuButton.scss';
+import '../MenuButton/MenuButton.scss';
 
 export const AsidePanelMenuItem: React.FC<AsidePanelMenuItemProps> = ({ id, title, isPriority = false}) => {
   const { commonFilterId, priorityFilterId } = useAppSelector((state) => state.home);

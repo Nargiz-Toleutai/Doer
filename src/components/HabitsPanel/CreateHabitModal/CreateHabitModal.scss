@@ -1,0 +1,117 @@
+@use '../../../styles/typography';
+
+.habit-modal {
+
+  &__backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--background-shadow);
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__modal {
+    container-type: inline-size;
+    background-color: var(--main-panel-background-color);
+    overflow-y: auto;
+    width: 80%;
+    height: 90%;
+    border-radius: 24px;
+  }
+
+//  @container(min-width: 300px)  {
+//    .habit-modal__modal {
+//        background-color: red;
+//    }
+//}
+
+  @media (min-width: 800px) {
+    .habit-modal__header {
+      background-color: var(--main-panel-background-color);
+    }
+
+    .habit-modal__tab-bar {
+      background-color: var(--main-panel-background-color);
+    }
+
+    .habit-modal__tab-button {
+      background: transparent;
+      border: none;
+      color: var(--placeHolder);
+      @include typography.secondary;
+
+      &_selected, &:hover {
+        color: var(--primary);
+      }
+    }
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 8px;
+    background-color: var(--red-light-gradient);
+    border: none;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+
+  &__header-buttons {
+    display: flex;
+    justify-content: space-between;
+
+  }
+  &__back-button {
+    padding: 10px;
+    background-color: transparent;
+    border: none;
+  }
+
+  &__close-button {
+    padding: 10px;
+    background-color: transparent;
+    border: none;
+  }
+
+
+  &__tab-bar {
+    display: flex;
+    justify-content: space-between;
+    height: 40px;
+    background-color: var(--red-light-gradient);
+  }
+
+  &__tab-button {
+    background: transparent;
+    border: none;
+    color: var(--light-theme-placeholder);
+    @include typography.secondary;
+
+    &_selected, &:hover {
+      color: var(--primary-negative);
+    }
+  }
+
+
+
+  &__tab-component {
+    flex-shrink: 0;
+    width: 100%;
+    transition: transform 0.3s ease;
+
+
+  }
+
+  &__tabs-container {
+    display: flex;
+    width: 100%;
+    overflow-x: hidden;
+  }
+}

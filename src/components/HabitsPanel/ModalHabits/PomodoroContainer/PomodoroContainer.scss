@@ -1,0 +1,120 @@
+@use '../../../../styles/typography';
+
+.pomodoro-container {
+  width: 100%;
+  padding: 12px 0 12px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    padding-bottom: 16px;
+  }
+
+  h5 {
+    @include typography.header5;
+    padding: 0;
+    margin: 0;
+  }
+
+  &__session {
+    display: flex;
+    background-color: var(--aside-panel-menu-background-color);
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: column;
+    border-radius: 12px;
+    gap: 8px;
+    padding: 8px 16px;
+    @include typography.secondary;
+  }
+
+  &__session-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 0 8px 0;
+    width: 100%;
+  }
+
+  &__session-time, &__session-unit {
+    color: var(--placeHolder);
+    background: transparent;
+    border: none;
+    @include typography.secondary;
+    flex-grow: 1;
+    text-align: right;
+    appearance: none;
+  }
+
+  &__session-time {
+    width: 20%;
+  }
+
+
+  &__session-title {
+    align-self: flex-start;
+    text-align: left;
+    width: 100%;
+  }
+
+  hr {
+    border: none;
+    color: var(--disabled);
+    border-top: 2px dotted;
+    height: 0;
+    width: 100%;
+    margin: 0;
+  }
+}
+
+//.pomodoro-container {
+//  &__header {
+//    display: flex;
+//    justify-content: space-between;
+//    align-items: center;
+//    padding: 20px;
+//    border-bottom: 1px solid #333;
+//  }
+//
+//
+//    &__session-item, &__session-title,  {
+//      display: flex;
+//      align-items: center;
+//      justify-content: space-between;
+//      padding: 20px;
+//      border-bottom: 1px solid #333;
+//      font-size: 16px;
+//    }
+//
+//
+//  &__session-time {
+//    background-color: #333; // Фоновый цвет поля ввода, измените на свой
+//    color: #fff; // Цвет текста поля ввода
+//    border: none;
+//    padding: 10px;
+//    width: 60px;
+//  }
+//
+//      .session-unit {
+//        margin-left: 10px; // Отступ селектора от поля ввода
+//        background-color: #333; // Фоновый цвет селектора, измените на свой
+//        color: #fff; // Цвет текста селектора
+//        border: none;
+//        padding: 10px;
+//
+//    }
+//
+//    hr {
+//      margin-top: 10px;
+//      margin-bottom: 10px;
+//      // Add more styles for hr if needed
+//    }
+//
+//  // Add any additional styles you might need
+//}

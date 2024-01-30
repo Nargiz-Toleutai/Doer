@@ -10,4 +10,10 @@
     position: relative;
     background-color: var(--main-panel-background-color);
     overflow: auto;
+
+    .circle-add-button {
+        position: absolute;
+        right: 16px;
+        bottom: 16px;
+    }
 }

@@ -1,0 +1,32 @@
+@use '../../../../styles/typography.scss';
+
+.custom-habit {
+  //display: flex;
+  //justify-content: center;
+  //flex-direction: column;
+
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+
+  > div {
+    transition: transform 0.3s ease, width 0.3s ease;
+  }
+
+
+  @media (min-width: 800px) {
+      flex-direction: row;
+
+    .create-custom-habit-modal-page-img {
+      flex: 2;
+      width: 200px;
+      transition: all linear .5s;
+
+    }
+    .custom-habit-tab-container {
+      flex: 2;
+    }
+  }
+}

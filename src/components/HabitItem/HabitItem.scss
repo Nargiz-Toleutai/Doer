@@ -1,0 +1,23 @@
+@use "../../styles/typography.scss";
+
+.habit-item {
+  height: 64px;
+  width: 100%;
+  gap: 16px;
+  padding: 13px 0 13px 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+
+  &_selected, &:hover {
+    background-color: var(--selected-item-color);
+    border-radius: 16px;
+  }
+  .check-box {
+    padding: 13px 16px;
+  }
+  .strikethrough {
+    text-decoration: line-through;
+  }
+}

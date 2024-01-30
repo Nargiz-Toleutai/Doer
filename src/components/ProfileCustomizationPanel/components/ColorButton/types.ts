@@ -1,6 +1,6 @@
 export interface ColorProps {
     title: string,
     id: string,
-    handleChange: VoidFunction,
+    handleChange: () => void,
     checked: boolean,
 }

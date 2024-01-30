@@ -38,4 +38,30 @@ export const router = createBrowserRouter([
         path: '/*',
         element: <Navigate to='/home' />,
     },
+    // {
+    //     path: '/',
+    //     element: <Portal />,
+    //     children: [
+    //         {
+    //             index: true,
+    //             element: <Navigate to='/custom' />,
+    //         },
+    //         {
+    //             path: '/custom',
+    //             element: <PriorityContainer />,
+    //         },
+    //         {
+    //             path: '/health',
+    //             element: <HealthHabit />,
+    //         },
+    //         {
+    //             path: '/relationships',
+    //             element: <RelationshipsHabit />,
+    //         },
+    //         {
+    //             path: '/education',
+    //             element: <EducationHabit />,
+    //         },
+    //     ]
+    // },
 ]);

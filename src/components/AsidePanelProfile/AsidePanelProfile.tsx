@@ -6,7 +6,7 @@ import { AsidePanelProfileItem } from './AsidePanelProfileItem';
 import { AsidePanelProfileItemProps } from './types';
 import './AsidePanelProfile.scss';
 import { MainProfile } from '../../pages/Profile/store/types';
-import { MenuButton } from '../AsidePanelMenuButton';
+import { MenuButton } from '../MenuButton';
 
 const b = block('aside-panel-profile');
 

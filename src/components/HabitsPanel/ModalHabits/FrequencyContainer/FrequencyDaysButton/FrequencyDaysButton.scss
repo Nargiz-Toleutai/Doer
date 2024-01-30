@@ -1,0 +1,18 @@
+@use '../../../../../styles/typography';
+
+
+.frequency-days-button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+
+
+  &__title {
+    @include typography.secondary
+  }
+
+}
+
+

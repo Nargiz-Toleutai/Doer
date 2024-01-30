@@ -1,6 +1,6 @@
 import Picker from '@emoji-mart/react';
 import block from 'bem-cn-lite';
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 
 import {EmojiInputProps} from './types';
 import './EmojiInput.scss';
@@ -10,17 +10,19 @@ import {Icon} from '../Icon';
 const b = block('emoji-input');
 
 export const EmojiInput: React.FC<EmojiInputProps> = ({labelInside, title, chevronDownButton}) => {
-    const [emoji, setEmoji] = useState('');
-    const [showPicker, setShowPicker] = useState(false);
+  const [emoji, setEmoji] = useState('');
+  const [emojiName, setEmojiName] = useState('');
+  const [showPicker, setShowPicker] = useState(false);
 
-    const handleEmojiSelect = (selectedEmoji: {native: React.SetStateAction<string>}) => {
-        setEmoji(selectedEmoji.native);
-        setShowPicker(false);
-    };
+  const handleEmojiSelect = (selectedEmoji: {native: string, name: string}) => {
+    setEmoji(selectedEmoji.native);
+    setEmojiName(selectedEmoji.name);
+    setShowPicker(false);
+  };
 
-    const handleEmojiClick = () => {
-        setShowPicker(!showPicker); // Переключаем видимость палитры при клике
-    };
+  const handleEmojiClick = () => {
+    setShowPicker(!showPicker); // Переключаем видимость палитры при клике
+  };
 
   const handleOutsideClick = () => {
     if (showPicker) {
@@ -28,18 +30,23 @@ export const EmojiInput: React.FC<EmojiInputProps> = ({labelInside, title, chevr
     }
   };
 
-    return (
+
+
+
+  return (
       <div className={b()}>
         <label className={b('label', {inside: labelInside})}>
           {title}
         </label>
-        <div className={b('emoji')}>{emoji}</div>
-        <input className={b('input')} />
-        {showPicker &&
-          <ClickOutsideWrapper onOutsideClick={handleOutsideClick}>
-            <Picker onEmojiSelect={handleEmojiSelect} />
-          </ClickOutsideWrapper>
-        }
+        <div className={b('body')}>
+          <div className={b('emoji')}>{emoji}</div>
+          <div className={b('emoji-name')}>{emojiName}</div>
+          {showPicker &&
+            <ClickOutsideWrapper onOutsideClick={handleOutsideClick}>
+              <Picker onEmojiSelect={handleEmojiSelect} />
+            </ClickOutsideWrapper>
+          }
+        </div>
         {chevronDownButton && (
           <button className={b('button')} onClick={handleEmojiClick}>
             <Icon name="reset" size={24} className={b('arrow-button')} />
@@ -48,3 +55,7 @@ export const EmojiInput: React.FC<EmojiInputProps> = ({labelInside, title, chevr
       </div>
     );
 };
+
+/*
+
+ */

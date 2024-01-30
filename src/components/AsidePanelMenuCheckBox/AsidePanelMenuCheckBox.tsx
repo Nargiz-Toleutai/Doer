@@ -6,7 +6,7 @@ import { AsidePanelMenuItemProps } from './types';
 import { setCommon, setFilters } from '../../pages/Statistics/store';
 import {CommonPanel, Filters} from '../../pages/Statistics/store/types';
 import { useAppDispatch, useAppSelector } from '../../store/mainStore/hooks/redux';
-import { MenuButton } from '../AsidePanelMenuButton';
+import { MenuButton } from '../MenuButton';
 
 
 

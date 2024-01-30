@@ -3,10 +3,10 @@ import * as React from 'react';
 
 import { AsidePanelProfileItemProps } from './types';
 import './AsidePanelProfileItem.scss';
-import { useAppDispatch, useAppSelector } from '../../store/mainStore/hooks/redux';
 import { setMainProfile } from '../../pages/Profile/store';
 import { MainProfile } from '../../pages/Profile/store/types';
-import { MenuButton } from '../AsidePanelMenuButton';
+import { useAppDispatch, useAppSelector } from '../../store/mainStore/hooks/redux';
+import { MenuButton } from '../MenuButton';
 
 // const b = block('aside-panel-profile-item');
 

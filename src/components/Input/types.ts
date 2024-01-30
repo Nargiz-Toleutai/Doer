@@ -1,5 +1,3 @@
-import React, { SetStateAction } from 'react';
-
 export interface InputProps {
     id: string;
     title?: string | null;

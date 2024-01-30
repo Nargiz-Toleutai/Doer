@@ -4,7 +4,7 @@ import {useTranslation} from 'react-i18next';
 
 import './HabitsPanelHeader.scss';
 import {Counter} from '../../Counter';
-import {SwitchButton} from '../../SwitchButton';
+import {SwitchViewModeButton} from '../../SwitchViewModeButton';
 
 const b = block('habits-panel-header');
 
@@ -17,7 +17,7 @@ export const HabitsPanelHeader: React.FC = () => {
             <h3>{t('Daily Tasks')}</h3>
             <Counter/>
           </div>
-            <SwitchButton/>
+            <SwitchViewModeButton />
         </div>
     );
 };

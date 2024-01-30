@@ -18,11 +18,11 @@ import './ProfileCustomizationPanel.scss';
 const b = block('profile-customization-panel');
 
 export const ProfileCustomizationPanel: React.FC = () => {
+    const {t} = useTranslation();
     const {colorId: currentColorId, themeId: currentThemeId} = useAppSelector((state) => state.theme);
 
     const dispatch = useAppDispatch();
 
-    const {t} = useTranslation();
     const themeSections = useMemo(() => [
         {themeId: CommonTheme.Light, title: t('Light')},
         {themeId: CommonTheme.Dark, title: t('Dark')},

@@ -1,4 +1,3 @@
-import { CommonColor, CommonTheme  } from '../../../../store/themeStore/types';
 import darkBlueFrame from '../../../../assets/themeFrames/darkBlue.svg';
 import darkGreenFrame from '../../../../assets/themeFrames/darkGreen.svg';
 import darkRedFrame from '../../../../assets/themeFrames/darkRed.svg';
@@ -9,6 +8,7 @@ import lightGreenFrame from '../../../../assets/themeFrames/lightGreen.svg';
 import lightRedFrame from '../../../../assets/themeFrames/lightRed.svg';
 import lightVioletFrame from '../../../../assets/themeFrames/lightViolet.svg';
 import lightYellowFrame from '../../../../assets/themeFrames/lightYellow.svg';
+import { CommonColor, CommonTheme  } from '../../../../store/themeStore/types';
 
 export const backgroundMap: Record<CommonColor, Record<CommonTheme, string>> = {
     [CommonColor.Red]: {

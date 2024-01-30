@@ -1,0 +1,26 @@
+.frequency-container {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  padding: 24px 0 24px 0;
+  width: 100%;
+
+
+  &__types {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+  }
+
+  h5 {
+    margin: 0;
+    padding-bottom: 24px;
+  }
+  &__days {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-top: 24px;
+  }
+}

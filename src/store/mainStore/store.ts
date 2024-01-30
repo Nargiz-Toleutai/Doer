@@ -12,9 +12,12 @@ import {
 import storage from 'redux-persist/lib/storage';
 
 import { slice as viewSlice } from '../../components/HabitsPanel/HabitsPanelHeader/store/slice'
+import { slice as frequencyDaySlice } from '../../components/HabitsPanel/ModalHabits/FrequencyContainer/store/slice';
+import { slice as remindersSlice } from '../../components/HabitsPanel/ModalHabits/RemindersContainer/store/slice'
 import { slice as backUpSlice} from '../../components/ProfileBackUpPanel/store/slice';
 import { slice as avatarSlice } from '../../components/ProfilePhoto/store/slice'
 import { slice as planSlice } from '../../components/ProfileSubscriptionPanel/store/slice'
+import { slice as toggleSlice } from '../../components/SwitchButton/store/slice'
 import { slice as homeSlice } from '../../pages/Home/store/slice';
 import { slice as pomodoroSlice } from '../../pages/Pomodoro/store/slice';
 import { slice as profileSlice } from '../../pages/Profile/store/slice';
@@ -39,6 +42,9 @@ const rootReducer = combineReducers({
     [statisticsSlice.name]: statisticsSlice.reducer,
     [viewSlice.name]: viewSlice.reducer,
     [habitAPI.reducerPath]: habitAPI.reducer,
+    [frequencyDaySlice.name]: frequencyDaySlice.reducer,
+    [remindersSlice.name]: remindersSlice.reducer,
+    [toggleSlice.name]: toggleSlice.reducer,
 });
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);
@@ -56,7 +62,7 @@ export const store = configureStore({
 
 export const persistor = persistStore(store);
 
-export type RootState = ReturnType<typeof persistedReducer>;
+export type  RootState = ReturnType<typeof persistedReducer>;
 export type AppStore = typeof store;
 export type AppDispatch = AppStore['dispatch'];
 

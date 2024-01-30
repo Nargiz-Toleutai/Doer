@@ -1,0 +1,58 @@
+@use '../../../../../styles/typography';
+
+.frequency-type-button {
+  $b: &;
+
+  &__input {
+    appearance: none;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+  }
+
+  &__label {
+    $l: &;
+    position: relative;
+    cursor: pointer;
+    width: 160px;
+    height: 125px;
+    border-radius: 12px;
+    border: 1.5px solid transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    &:has(>input[type='radio']:checked):before {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: -3px;
+      left: -2px;
+      right: -4px;
+      border: 1.5px solid var(--red);
+      border-radius: 16px;
+    }
+
+    &:has(>input[type='radio']:checked) {
+      &#{$l}_color_red:before { border-color: var(--red); }
+      &#{$l}_color_green:before { border-color: var(--green); }
+      &#{$l}_color_blue:before { border-color: var(--blue); }
+      &#{$l}_color_yellow:before { border-color: var(--yellow); }
+      &#{$l}_color_violet:before { border-color: var(--violet); }
+
+      & ~ #{$b}__title {
+        color: var(--primary);
+        @include typography.secondary;
+      }
+    }
+  }
+  &__title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    @include typography.secondary;
+    padding: 8px;
+  }
+}

@@ -10,9 +10,15 @@ import { PanelButton } from '../PanelButton';
 
 const b = block('habit-item');
 
-export const HabitItem: React.FC<HabitItemProps> = ({habit, remove, update, checked, onCheckedChange, selected}) => {
+export const HabitItem: React.FC<HabitItemProps> = ({habit,
+                                                      remove, update,
+                                                      checked,
+                                                      onCheckedChange,
+                                                      selected,
+                                                      icon}) => {
 
   const [isRemoved, setIsRemoved] = useState(checked);
+  const [isUpdated, setIsUpdated] = useState(checked);
 
 
     // const handleRemove = (event: React.MouseEvent) => {
@@ -35,7 +41,7 @@ export const HabitItem: React.FC<HabitItemProps> = ({habit, remove, update, chec
 
     return (
       <div className={b({ selected })}>
-        <PanelButton title={habit.name} icon={'sale'} description={habit.frequency} id={habit.id} onClick={handleUpdate} removed={isRemoved}/>
+        <PanelButton title={habit.name} icon={icon ? icon : ''} description={habit.frequency} id={habit.id} onClick={handleUpdate} removed={isRemoved} update={isUpdated}/>
         <CheckBox checked={isRemoved} onCheckedChange={handleCheckedChange}/>
       </div>
     );

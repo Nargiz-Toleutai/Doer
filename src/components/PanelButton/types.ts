@@ -8,5 +8,7 @@ export interface PanelButtonProps {
     name?: string,
     description?: string | number,
     onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void;
-    removed?: boolean
+    removed?: boolean,
+    update?:boolean,
+
 }

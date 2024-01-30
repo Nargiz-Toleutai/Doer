@@ -3,8 +3,8 @@ import React from 'react';
 
 import {LogoProps} from './types';
 import {backgroundMap} from './utils';
-import {CommonTheme} from '../../store/themeStore/types';
 import {useThemeDetector} from '../../hooks/useThemeDetector';
+import {CommonTheme} from '../../store/themeStore/types';
 import { Svg } from '../Svg';
 import './Logo.scss';
 

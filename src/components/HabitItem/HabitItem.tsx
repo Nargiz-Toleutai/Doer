@@ -30,9 +30,9 @@ export const HabitItem: React.FC<HabitItemProps> = ({habit,
 
     const handleUpdate = (event: React.MouseEvent) => {
       if (event.defaultPrevented) return;
-        const title = prompt('Update title:', habit.name) ?? '';
-        if(title) {
-          update({...habit, title});
+        const newName = prompt('Update title:', habit.name) ?? '';
+        if(newName) {
+          update({...habit, name: newName});
           setIsUpdated(true);
         }
     }

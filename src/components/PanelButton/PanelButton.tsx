@@ -21,15 +21,11 @@ export const PanelButton: React.FC<PanelButtonProps> = ({ id,
                                                           description,
                                                           onClick }) => {
   const { t } = useTranslation();
-  const [name, setName] = useState('');
     return (
         <button className={b({ selected })} onClick={onClick}>
           <Icon name={String(icon)} size={24} className={b('icon')} />
           <div id={String(id)} className={b('item')}>
-            <div className={b('title', { removed, update })}>
-              <input value={name} onChange={(e) => setName(e.target.value)}/>
-              {title}
-            </div>
+            <div className={b('title', { removed, update })}>{title}</div>
             <div className={b('description')}>{description} {t('streaks')}</div>
           </div>
         </button>

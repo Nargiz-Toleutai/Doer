@@ -5,6 +5,7 @@ import { useTranslation } from 'react-i18next';
 import './HabitItem.scss';
 import { HabitItemProps } from './types';
 import { CheckBox } from '../CheckBox';
+import { Icon } from '../Icon';
 import { PanelButton } from '../PanelButton';
 
 
@@ -16,7 +17,6 @@ export const HabitItem: React.FC<HabitItemProps> = ({habit,
                                                       onCheckedChange,
                                                       selected,
                                                       icon}) => {
-
   const [isRemoved, setIsRemoved] = useState(false);
   const [isUpdated, setIsUpdated] = useState(false);
 
@@ -42,7 +42,8 @@ export const HabitItem: React.FC<HabitItemProps> = ({habit,
   };
 
   return (
-    <div className={b({ selected, removed: isRemoved })}>
+    <div className={b({ selected: selected, removed: isRemoved })}>
+      <Icon name={habit.icon} className={habit.icon} size={24}/>
       <PanelButton
         title={habit.name}
         icon={icon ? icon : ''}
@@ -53,9 +54,9 @@ export const HabitItem: React.FC<HabitItemProps> = ({habit,
         update={isUpdated}
       />
       <CheckBox checked={isRemoved} onCheckedChange={handleCheckedChange}/>
-      <button onClick={handleRemove}>Remove</button>
+
     </div>
   );
 };
 
-//  <EmojiInput  id={'Emoji'} title={t('Choose icon')} chevronDownButton/>
+//  <button onClick={handleRemove}>remove</button>

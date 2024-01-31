@@ -4,7 +4,7 @@
   height: 64px;
   width: 100%;
   gap: 16px;
-  padding: 13px 0 13px 0;
+  padding: 13px 16px;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -14,10 +14,18 @@
     background-color: var(--selected-item-color);
     border-radius: 16px;
   }
-  .check-box {
-    padding: 13px 16px;
+
+  &_removed .check-box input[type=checkbox] {
+    border: none;
+    box-shadow: inset 1em 2em var(--accent-light);;
   }
+
   .strikethrough {
     text-decoration: line-through;
   }
+}
+
+.check-box input[type=checkbox] {
+  border: solid var(--disabled);
+  box-shadow: none;
 }

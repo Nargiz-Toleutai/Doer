@@ -17,34 +17,45 @@ export const HabitItem: React.FC<HabitItemProps> = ({habit,
                                                       selected,
                                                       icon}) => {
 
-  const [isRemoved, setIsRemoved] = useState(checked);
-  const [isUpdated, setIsUpdated] = useState(checked);
+  const [isRemoved, setIsRemoved] = useState(false);
+  const [isUpdated, setIsUpdated] = useState(false);
 
 
-    // const handleRemove = (event: React.MouseEvent) => {
-    //     event.stopPropagation()
-    //   event.preventDefault()
-    //     remove(habit)
-    // }
+    const handleRemove = (event: React.MouseEvent) => {
+        event.stopPropagation();
+        event.preventDefault();
+        remove(habit);
+        setIsRemoved(true);
+    }
 
     const handleUpdate = (event: React.MouseEvent) => {
       if (event.defaultPrevented) return;
-        const title = prompt() ?? ''
-        update({...habit, title})
+        const title = prompt('Update title:', habit.name) ?? '';
+        if(title) {
+          update({...habit, title});
+          setIsUpdated(true);
+        }
     }
   const handleCheckedChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    onCheckedChange?.(e); // Call onCheckedChange if it's provided
     setIsRemoved(e.target.checked);
-    if(onCheckedChange) {
-      onCheckedChange(e);
-    }
   };
 
-    return (
-      <div className={b({ selected })}>
-        <PanelButton title={habit.name} icon={icon ? icon : ''} description={habit.frequency} id={habit.id} onClick={handleUpdate} removed={isRemoved} update={isUpdated}/>
-        <CheckBox checked={isRemoved} onCheckedChange={handleCheckedChange}/>
-      </div>
-    );
+  return (
+    <div className={b({ selected, removed: isRemoved })}>
+      <PanelButton
+        title={habit.name}
+        icon={icon ? icon : ''}
+        description={habit.frequency}
+        id={habit.id}
+        onClick={handleUpdate}
+        removed={isRemoved}
+        update={isUpdated}
+      />
+      <CheckBox checked={isRemoved} onCheckedChange={handleCheckedChange}/>
+      <button onClick={handleRemove}>Remove</button>
+    </div>
+  );
 };
 
 //  <EmojiInput  id={'Emoji'} title={t('Choose icon')} chevronDownButton/>

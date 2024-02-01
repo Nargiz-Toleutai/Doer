@@ -56,9 +56,7 @@ export const CreateHabitModal: React.FC<CreateHabitModalProps> = ({ open, childr
             </div>
           ))}
         </div>
-
       </div>
-
       </div>
     </div>,
     portalElement

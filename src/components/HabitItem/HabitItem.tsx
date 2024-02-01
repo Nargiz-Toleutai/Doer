@@ -3,8 +3,11 @@ import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import './HabitItem.scss';
+import { HabitItemModal } from './HabitItemModal/HabitItemModal';
 import { HabitItemProps } from './types';
 import { CheckBox } from '../CheckBox';
+import { CreateHabitModal } from '../HabitsPanel/CreateHabitModal/CreateHabitModal';
+import { CustomHabitTabComponent } from '../HabitsPanel/ModalHabits/CustomHabitTabComponent';
 import { Icon } from '../Icon';
 import { PanelButton } from '../PanelButton';
 
@@ -20,6 +23,12 @@ export const HabitItem: React.FC<HabitItemProps> = ({habit,
   const [isRemoved, setIsRemoved] = useState(false);
   const [isUpdated, setIsUpdated] = useState(false);
 
+  const [showCustomHabit, setShowCustomHabit] = useState(false);
+
+  const handleButtonClick = () => {
+    console.log("Button clicked, opening modal");
+    setShowCustomHabit(true);
+  }
 
     const handleRemove = (event: React.MouseEvent) => {
         event.stopPropagation();
@@ -49,14 +58,15 @@ export const HabitItem: React.FC<HabitItemProps> = ({habit,
         icon={icon ? icon : ''}
         description={habit.frequency}
         id={habit.id}
-        onClick={handleUpdate}
+        onClick={handleButtonClick}
         removed={isRemoved}
         update={isUpdated}
       />
+      {showCustomHabit &&  <HabitItemModal/>}
       <CheckBox checked={isRemoved} onCheckedChange={handleCheckedChange}/>
-
     </div>
   );
 };
 
 //  <button onClick={handleRemove}>remove</button>
+// onClick={handleUpdate}

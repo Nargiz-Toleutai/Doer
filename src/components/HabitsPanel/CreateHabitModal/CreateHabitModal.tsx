@@ -10,7 +10,7 @@ import { CustomHabitTabComponent } from '../ModalHabits/CustomHabitTabComponent'
 import { HealthHabit } from '../ModalHabits/HealthHabit/HealthHabit';
 import { PriorityContainer } from '../ModalHabits/PriorityContainer';
 
-const b = block('habit-modal');
+const b = block('create-habit-modal');
 
 export const CreateHabitModal: React.FC<CreateHabitModalProps> = ({ open, children, onClose, selected }) => {
   const portalElement = document.getElementById('portal');

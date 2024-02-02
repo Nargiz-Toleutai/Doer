@@ -1,13 +1,11 @@
 import block from 'bem-cn-lite';
-import React, { useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import './HabitItem.scss';
-import { HabitItemModal } from './HabitItemModal/HabitItemModal';
+import { HabitItemEditComponentModal } from './HabitItemEditComponentModal/HabitItemEditComponentModal';
 import { HabitItemProps } from './types';
 import { CheckBox } from '../CheckBox';
-import { CreateHabitModal } from '../HabitsPanel/CreateHabitModal/CreateHabitModal';
-import { CustomHabitTabComponent } from '../HabitsPanel/ModalHabits/CustomHabitTabComponent';
 import { Icon } from '../Icon';
 import { PanelButton } from '../PanelButton';
 
@@ -23,12 +21,31 @@ export const HabitItem: React.FC<HabitItemProps> = ({habit,
   const [isRemoved, setIsRemoved] = useState(false);
   const [isUpdated, setIsUpdated] = useState(false);
 
-  const [showCustomHabit, setShowCustomHabit] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
 
-  const handleButtonClick = () => {
-    console.log("Button clicked, opening modal");
-    setShowCustomHabit(true);
+  const modalRef = useRef<HTMLDivElement | null>(null);
+
+  const handleOpenModal = () => {
+    setIsOpen(true);
   }
+
+  const handleCloseModal = () => {
+    setIsOpen(false);
+  }
+
+  useEffect(() => {
+    const handleOutsideClick = (event: MouseEvent) => {
+        if (modalRef.current && !modalRef.current.contains(event.target as Node)) {
+            setIsOpen(false);
+        }
+    };
+
+    document.addEventListener('mousedown', handleOutsideClick);
+
+    return () => {
+      document.removeEventListener('mousedown', handleOutsideClick);
+    };
+  }, []);
 
     const handleRemove = (event: React.MouseEvent) => {
         event.stopPropagation();
@@ -58,11 +75,15 @@ export const HabitItem: React.FC<HabitItemProps> = ({habit,
         icon={icon ? icon : ''}
         description={habit.frequency}
         id={habit.id}
-        onClick={handleButtonClick}
+        onClick={handleOpenModal}
         removed={isRemoved}
         update={isUpdated}
       />
-      {showCustomHabit &&  <HabitItemModal/>}
+      { isOpen && (
+        <div ref={modalRef}>
+          <HabitItemEditComponentModal open={isOpen} onClose={handleCloseModal}/>
+        </div>
+      )}
       <CheckBox checked={isRemoved} onCheckedChange={handleCheckedChange}/>
     </div>
   );
